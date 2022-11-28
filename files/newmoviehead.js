@@ -9,6 +9,6 @@ document.write("                <li><a href=\"https:\/\/www.museneko.top\/animat
 document.write("                <li><a href=\"https:\/\/www.museneko.top\/movie\" ><font size=\"1\">缪斯喵影视<\/font><\/a><\/li>");
 document.write("                <li><a href=\"https:\/\/www.museneko.top\/comic\" ><font size=\"1\">缪斯喵漫画<\/font><\/a><\/li>");
 document.write("                <li><a href=\"https:\/\/www.museneko.top\/ecy\" ><font size=\"1\">二次元图库<\/font><\/a><\/li>");
-document.write("				<li><a href=\"https:\/\/bbs.museneko.top\" ><font size=\"1\">缪斯喵论坛<\/font><\/a><\/li>");
+document.write("				<li><a href=\"https:\/\/game.museneko.top\" ><font size=\"1\">缪斯喵游戏<\/font><\/a><\/li>");
 document.write("				<li><a href=\"https:\/\/www.museneko.top\/MUSENEKO\" ><font size=\"1\">缪斯喵官方<\/font><\/a><\/li>");
 document.write("                            <\/ul>");
