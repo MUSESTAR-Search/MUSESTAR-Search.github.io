@@ -15,7 +15,7 @@ document.write("				<a href=\"https:\/\/www.museneko.top\/ecy\">二次元图库<
 document.write("    <\/ul>");
 document.write("<ul class=\"dme r\">");
 document.write("			<li>");
-document.write("<a href=\"https:\/\/game.museneko.top\" >缪斯喵游戏<\/a>");
+document.write("<a href=\"https:\/\/museneko.top\/game\" >缪斯喵游戏<\/a>");
 document.write("			<\/li>");
 document.write("			<li>");
 document.write("<a href=\"https:\/\/www.museneko.top\/MUSENEKO\" >缪斯喵官方<\/a>");
