@@ -170,6 +170,13 @@
 			   </div>	
 			</div>
 						   <div class="pannel_head clearfix">
+							<script>
+								let sercB = document.createElement('a');
+								sercB.className = 'sercB'
+								sercB.innerHTML = "<h1>加载不出来？点我切换播放器。</h1>"
+								sercB.href = `playerQ.html?vsrc=${videoR}`
+								document.body.appendChild(sercB)
+							</script>
 	<div class="container">
 	   <div class="left_row fl"> 
 			   <div class="pannel ads_box clearfix hide">
@@ -179,11 +186,4 @@
 				 </div>
 				 <script type="text/javascript" src="https://www.musestar.top/files/under.js"></script>
 </body>
-<script>
-    let sercB = document.createElement('a');
-	sercB.className = 'sercB'
-    sercB.innerHTML = "<h1>加载不出来？点我切换播放器。</h1>"
-    sercB.href = `playerQ.html?vsrc=${videoR}`
-    document.body.appendChild(sercB)
-</script>
 </html>
