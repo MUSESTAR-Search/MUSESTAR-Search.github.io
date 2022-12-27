@@ -59,7 +59,8 @@
 <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newblue.css" name="skin">
 <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newblack.css" name="color">
 <script type="text/javascript" src="https://www.musestar.top/files/newjquery.min.js"></script>
-<script src="https://www.musestar.top/files/hls.js"></script><!-- hls.js必须引入，可下载至本地 -->
+<script src="https://www.musestar.top/files/hls.js"></script>
+<script src="https://www.musestar.top/files/DPlayer.js"></script>
 </head>
 <body class="bstem">
 	<style> body{cursor:url('https://www.musestar.top/files/sbzz.png'),auto;}</style>
@@ -80,12 +81,31 @@
 		<div class="container">
 	        			<div class="play_box play_video">
 			<!-- 播放器  -->
-				<div class="left_row fl">
+			<div class="left_row fl">
 
-					<div class="player_video embed-responsive embed-responsive-16by9 author-qq362695000 clearfix">
-						<video src="https://www.museneko.top/r18/animation/video/mmht.mp4" controls autoplay></video>
-						
-						</div>
+				<div>  
+					<div id="dplayer"></div>
+				  <script>
+			  var dp = new DPlayer({
+			  container: document.getElementById('dplayer'),
+			  hotkey: true,
+			  preload: 'auto',
+			  logo: 'https://www.musestar.top/ms.ico',
+		  autoplay: true,
+		  volume: 1.0,
+			  video: {
+			  url: 'https://www.museneko.top/r18/animation/video/mmht.mp4',
+                         },
+						 contextmenu: [
+        {
+                  text: '缪斯星首页',
+                  link: 'https://www.musestar.top/',
+        },
+
+    ],
+                           });
+					  </script>
+					</div>
                  <div class="play_but bline">
 					  <ul>
 						<li>
