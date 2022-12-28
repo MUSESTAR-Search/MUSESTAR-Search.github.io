@@ -3,7 +3,7 @@ crUl();
 if (!(typeof (playarr) == "undefined" || playarr == null)) {
 	pAr = playarr;
 	//console.log(pAr);
-	runPlayer(pAr, 'playarr');
+	runPlayer(pAr, '播放源1');
 	isOnLo = true;
 }
 
