@@ -28,8 +28,8 @@
 		scrP.type = 'text/javascript';
 		head.append(scrP);
     </script>
-    <a href="http://www.museneko.top/bangumi/playerY.html" style="display: none"></a>
-    <a href="http://www.museneko.top/bangumi/runP.js" style="display: none"></a>
+    <a href="playerY.html" style="display: none"></a>
+    <a href="runP.js" style="display: none"></a>
 </head>
 <body>
 <h1>
@@ -47,7 +47,7 @@
 			let temLi = document.createElement('li');
 			let temA = document.createElement('a');
 			let vUri = playArr[teP].split(',')[0];
-			temA.href = (vUri.split('.').pop() === 'html') ? ` ` : `http://www.museneko.top/bangumi/playerY.html?vsrc=${vUri}`;
+			temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
 			temA.innerHTML = unescape(playArr[teP].split(',')[2]);
 			temLi.innerHTML = `源数组${arrName}[${teP}]:`;
 			temLi.append(temA);
@@ -63,6 +63,6 @@
 	let isOnLo = false;
 
 </script>
-<script src="http://www.museneko.top/bangumi/runP.js"></script>
+<script src="runP.js"></script>
 </body>
 </html>
