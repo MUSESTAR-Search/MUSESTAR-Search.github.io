@@ -180,7 +180,7 @@
 							let vUri = playArr[teP].split(',')[0];
 							temA.href = (vUri.split('.').pop() === 'html') ? ` ` : `http://www.musestar.top/animation/DPlayer.html?vsrc=${vUri}`;
 							temA.innerHTML = unescape(playArr[teP].split(',')[2]);
-							temLi.innerHTML = `播放源${arrName}第[${teP}]集`;
+							temLi.innerHTML = `播放源${arrName}第${teP}集`;
 							temLi.append(temA);
 							theList.appendChild(temLi);
 						}
