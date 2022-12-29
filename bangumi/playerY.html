@@ -10,9 +10,7 @@
         }
     </style>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.2.9/hls.min.js"
-        integrity="sha512-6bEjENYpGBIDWtHO5JCR6xuFnc5KZM4zUdjq3W1043lv24p+YTaZSX6RE50qI5mtHZaMhz3Obzj7pjTKYRZRMg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://www.musestar.top/files/hls.js"></script>
 <script>
 	function getQueryVariable(variable) {
 		let query = window.location.search.substring(1);
@@ -35,17 +33,27 @@
 </script>
 <body>
 <div id="dplayer"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.27.0/DPlayer.min.js"
-        integrity="sha512-S4ZaugkFW1FjFLmQYt7dvJuNI0T3T3rwc8iHX3bAk3QT0KFlDrHxdEkg1g8WBkSiyZgtDSu62vvFigf66cVMPQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://www.musestar.top/files/DPlayer.js"></script>
 <script>
-	const dp = new DPlayer({
-		container: document.getElementById('dplayer'),
-		video: {
-			url: videoR,
-		},
-	});
-</script>
+	var dp = new DPlayer({
+	container: document.getElementById('dplayer'),
+	hotkey: true,
+	preload: 'auto',
+	logo: 'https://www.musestar.top/ms.ico',
+autoplay: true,
+volume: 1.0,
+	video: {
+	url: videoR,
+		   },
+		   contextmenu: [
+{
+	text: '缪斯星首页',
+	link: 'https://www.musestar.top/',
+},
+
+],
+			 });
+		</script>
 </body>
 <script>
 	let sercB = document.createElement('a');
