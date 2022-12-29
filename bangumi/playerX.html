@@ -51,15 +51,18 @@
 <head>
 <!-- Clarity tracking code for https://www.musestar.top/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "dvrisi60tf");</script><meta name="referrer" content="no-referrer"><meta charset="UTF-8">
 <meta name="referrer" content="no-referrer">  
-<title>自定义播放PlayerXฅ^≧ω≦^ฅ缪斯星搜索</title> 
+<title>自定义播放ฅ^≧ω≦^ฅ缪斯星搜索</title> 
 <link rel="shortcut icon" href="https://www.musestar.top/ms.ico">
 <meta name='keywords' content='自定义播放,动漫,番剧,电影,电视剧,剧集,在线观看,缪斯星,MUSESTAR'>
 <meta name="description" content="自定义播放">
 <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newstyle.css">
 <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newblue.css" name="skin">
 <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newblack.css" name="color">
+<script type="text/javascript" src="https://www.musestar.top/files/newjquery.min.js"></script>
+<script src="https://www.musestar.top/files/hls.js"></script>
+<script src="https://www.musestar.top/files/DPlayer.js"></script>
 <script>
-		if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
+	if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
 </script>
 <script>
 	function getQueryVariable(variable) {
@@ -76,116 +79,158 @@
 
 	let idx = getQueryVariable('idx');
 
-	let head = document.getElementsByTagName('head').item(0);
-
 	let scrP = document.createElement('script');
 	scrP.src = `//d.gqyy8.com:8077/ne2/s${idx}.js`;
 	scrP.type = 'text/javascript';
-	head.append(scrP);
+	document.head.appendChild(scrP);
 </script>
+<style>
+	.thePlayer{
+		border: 0;
+		width: 100%;
+	}
+</style>
 </head>
 <body class="bstem">
-	<div>
-		<style> 
-			body {
-			  background:url("https://dev.iw233.cn/api.php?sort=random")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-			  background-size:cover;  /* 让背景图基于容器大小伸缩 */
-			  background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */    //此条属性必须设置否则可能无效/
-			  background-color:#CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-		   </style>
-	</div>	
 	<style> body{cursor:url('https://www.musestar.top/files/sbzz.png'),auto;}</style>
 	<script src="https://www.musestar.top/files/sbtx.js"></script>
-    <div id="topnav" class="head_box">    <div class="header">
-		<div class="head_a">
+	<div id="play_page">
+    <div class="hot_banner">
+    <div id="topnav" class="head_box">
+    <div class="header">
+	<div class="head_a">
 		<div class="head_menu_a hidden_xs hidden_mi">
 			<script type="text/javascript" src="https://www.musestar.top/files/newshead.js"></script>
-	      </div>	
-		</div>	    		
-	 </div>	 		
-   </div>	 
-		      <div class="hot_banner ">
+		</div>
+	</div>
+	</div>
+</div>
     </div>
-    <div class="detail_list_box">
-         <div class="detail_list">
-				<div class="content_box clearfix">
-					<div class="content_thumb fl">											
-						<a class="vodlist_thumb lazyload" style="background-image: url(https://s1.imagehub.cc/images/2022/12/04/2102776ea35145c7dc47fe1c5696c86c.jpeg);"><span class="play hidden_xs"></span>
-						</a>								
-					</div>
-					<div class="content_detail content_top fl">
-						<div class="pannel_head clearfix">
-							<h2 class="title">自定义播放</h2>
-							<p><font color="white">别名：自定义播放</font></p>
-						</div>
-                    </div>
-                    <div class="content_detail content_min fl">
-                        <ul>	
-						<li class="data">
-							<span class="text_muted hidden_xs">上映时间：</span><a>公元</a><span class="split_line"></span>
-							<span class="text_muted hidden_xs">地区：</span><a>地球</a><span class="split_line"></span>
-							<span class="text_muted hidden_xs">类型：</span><a>自定义播放  </a>
-						</li>
-						<li class="data"><span></span><a><script type="text/javascript" src="https://www.musestar.top/animation/files/代码例.js"></script></a></li>
-						</li>
-						</ul>
-					</div>
-					<div class="content_detail content_min content_btn fl">			    
-<div class="playbtn o_play">
-	    <form action="http://www.musestars.top/bangumi/searchX.html">
-		<span>搜索:</span>
-		<input type="text" name="s" id="s">
-		<input type="submit" value="搜索">
-	</form>
-                    </div>
-                 </div>
-             </div>
-          </div>
-       </div>
-     </div>
-    <div class="container ">
-			<div class="pannel clearfix">
-				<div class="tabs">
-				  <div class="content">
-						<div>
-						</div>
-				    </div>
-				 </div>
-		      </div>		
-			<div class="pannel clearfix">
-			    <div class="pannel_head clearfix">
-					<h3 class="title">没显示可能是抽风了，请刷新。</h3>
-			            	<p>当然，不排除没有资源的情况。<script type="text/javascript" src="https://www.musestar.top/animation/files/代码例.js"></script></p>
-							<ul class="content_playlist clearfix">
-							 </ul> 				
-							<h3 class="title">播放源及集数选择</h3>	
-								  </div>
-									  <ul class="content_playlist clearfix">
-										<ul id="m3u8List">
+	<div class="play_boxbg">
+		<div class="container">
+	        			<div class="play_box play_video">
+			<!-- 播放器  -->
+				<div class="left_row fl">
 
-										</ul>										
-									  </ul> 
-									</div>
-			    <div class="pannel ads_box clearfix hide">
-	      </div>
-				<script type="text/javascript" src="https://www.musestar.top/files/under.js"></script>
-				<script>
+					<div>  
+						<div id="videoF">
+						</div>
+					</div>
+                 <div class="play_but bline">
+					  <ul>
+						<li>
+							<a ><font color="red">请勿相信视频内的任何广告，问题反馈请点击右上角缪斯星官方，无法播放请更换播放源</font></a>
+						</li>
+                       </ul>
+					</div>
+				</div>
+				<div class="right_row fr hidden_xs hidden_mi" style="position: relative;">
+					 <div class="play_box_right">
+						 <div class="play_namebox">
+							<h3 class="title">自定义播放</h3>
+						</div>
+						<div class="play_infobox">
+							<div class="play_vlist cblock">
+								<div class="play_vlist_thumb vnow lazyload" style="background-image: url(https://s1.imagehub.cc/images/2022/12/04/2102776ea35145c7dc47fe1c5696c86c.jpeg)"></div>
+								<div class="play_vlist_text vnow">
+									<p class="play_vlist_title">自定义播放</p>
+									<p class="play_vlist_now"><script type="text/javascript" src="https://www.musestar.top/animation/files/代码例.js"></script></script></p>
+								</div>
+						   </div>
+						</div><img  width="auto" height="300" src="https://s1.imagehub.cc/images/2022/12/04/2102776ea35145c7dc47fe1c5696c86c.jpeg">
+					</div>
+			   </div>
+			   <!-- end 播放器  -->
+		   <div class="play_box">
+			   <div class="left_row fl">
+										  <div class="pannel play_pan clearfix">
+					   <div class="player">
+						   <div class="player_detail detail cblock">
+							  <div class="video_title fl">
+								 <h2 class="title margin_0"><img src="https://www.musestar.top/ms.ico" width="40" height="40">自定义播放</h2>
+							  </div>
+						   </div>
+													   <div class="play_text">
+							  <p class="nstem data ms_p margin_0">
+								   <a >自定义播放</a>	
+							  </p>
+						   </div>
+					   </div>																					
+				   </div>
+			   </div>	
+			</div>
+						   <div class="pannel_head clearfix">
+	<div class="container">
+	   <div class="left_row fl"> 
+			   <div class="pannel ads_box clearfix hide">
+			   </div>
+			   <form action="http://www.musestars.top/bangumi/searchX.html">
+				<span>搜索:</span>
+				<input type="text" name="s" id="s">
+				<input type="submit" value="搜索">
+			</form>
+			<h3 class="title">没显示可能是抽风了，请刷新。</h3>
+			<p>当然，不排除没有资源的情况。<script type="text/javascript" src="https://www.musestar.top/animation/files/代码例.js"></script></p>
+			<h3 class="title">播放源及集数选择</h3>	
+		</div>
+		<ul class="content_playlist clearfix">
+			<ul id="m3u8List">
+
+			</ul>
+		</ul> 
+   </div>
+</div>
+				 <script type="text/javascript" src="https://www.musestar.top/files/under.js"></script>
+				 <script>
 					let theList = document.getElementById('m3u8List');
+					let videoF = document.getElementById('videoF');
 				
 					function runPlayer(playArr, arrName) {
 						for (const teP in playArr) {
 							let temLi = document.createElement('li');
 							let temA = document.createElement('a');
 							let vUri = playArr[teP].split(',')[0];
-							temA.href = (vUri.split('.').pop() === 'html') ? ` ` : `http://www.musestars.top/DPlayer.html?vsrc=${vUri}`;
+							// temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
+							temA.href = `javascript:addPlayer('${vUri}');`;
 							temA.innerHTML = unescape(playArr[teP].split(',')[2]);
-							temLi.innerHTML = `播放源${arrName}[${teP}]`;
+							temLi.innerHTML = `${arrName}源[${teP}]:`;
 							temLi.append(temA);
 							theList.appendChild(temLi);
 						}
 					}
-				
+					function addPlayer(vUri){
+						let temF = document.createElement('iframe')
+						temF.src = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
+						temF.className = 'thePlayer'
+						temF.name = 'theEndPlay'
+						temF.scrolling = 'no'
+						temF.onload = function (){
+							this.height = theEndPlay.document.body.scrollHeight;
+						}
+						videoF.innerHTML = '';
+						videoF.appendChild(temF);
+					}
+					const SunZ = [
+						"%E4%BF%97",
+						"%E6%89%8B%E5%87",
+						"%BA%E5%93%81%EF",
+						"%BC%8C%E7%9B%97",
+						"%E7%94%A8%E6%AD%BB",
+						"%E5%85%A8%E5%AE%B6",
+						console
+					];
+					const me$ap = [
+						{name: "一般", id: "playarr"},
+						{name: "LZ", id: "playarr_lz"},
+						{name: "WJ", id: "playarr_wj"},
+						{name: "二般", id: "playarr_1"},
+						{name: "三般", id: "playarr_2"},
+						{name: "BJ", id: "playarr_bj"},
+						{name: "FS", id: "playarr_fs"},
+						{name: "HN", id: "playarr_hn"}
+					];
+					//上面这是个对象数组，存储着源相关的内容
+					//name是显示在屏幕上的名字，id是本不应该存在的对象的名字
 					function crUl() {
 						theList.innerHTML = '';
 					}
@@ -194,7 +239,6 @@
 					let isOnLo = false;
 				
 				</script>
-				<script src="http://www.musestars.top/bangumi/runP.js"></script>
-				
+				<script src="runP.js"></script>
 </body>
 </html>

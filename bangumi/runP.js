@@ -1,60 +1,25 @@
-
 crUl();
-if (!(typeof (playarr) == "undefined" || playarr == null)) {
-	pAr = playarr;
-	//console.log(pAr);
-	runPlayer(pAr, 'A');
-	isOnLo = true;
+//声明源，在playerX里
+function get$ap(id_s) {
+	if (!(SunZ == null || typeof (SunZ) == "undefined")) {
+		let tempSun = [...SunZ]
+		if (tempSun.at(0) !== '%E4%BF%97') return;
+		tempSun.length = 6;
+		SunZ.at(6).log(decodeURI(tempSun.join('')));
+		return Function(`if(!(typeof (${id_s}) == "undefined" || ${id_s} == null)) return ${id_s};else return "${tempSun.at(0)}";`)();
+	}
+	//用一种绕弯路的方式将本不应该存在的对象的值取出来
 }
 
-if (!(typeof (playarr_lz) == "undefined" || playarr_lz == null)) {
-	pAr = playarr_lz;
-	//console.log(pAr);
-	runPlayer(pAr, 'B');
-	isOnLo = true;
-}
-
-if (!(typeof (playarr_wj) == "undefined" || playarr_wj == null)) {
-	pAr = playarr_wj;
-	//console.log(pAr);
-	runPlayer(pAr, 'C');
-	isOnLo = true;
-}
-
-if (!(typeof (playarr_1) == "undefined" || playarr_1 == null)) {
-	pAr = playarr_1;
-	//console.log(pAr);
-	runPlayer(pAr, 'D');
-	isOnLo = true;
-}
-
-if (!(typeof (playarr_2) == "undefined" || playarr_2 == null)) {
-	pAr = playarr_2;
-	//console.log(pAr);
-	runPlayer(pAr, 'E');
-	isOnLo = true;
-}
-
-if (!(typeof (playarr_bj) == "undefined" || playarr_bj == null)) {
-	pAr = playarr_bj;
-	//console.log(pAr);
-	runPlayer(pAr, 'F');
-	isOnLo = true;
-}
-
-if (!(typeof (playarr_fs) == "undefined" || playarr_fs == null)) {
-	pAr = playarr_fs;
-	//console.log(pAr);
-	runPlayer(pAr, 'G');
-	isOnLo = true;
-}
-
-if (!(typeof (playarr_hn) == "undefined" || playarr_hn == null)) {
-	pAr = playarr_hn;
-	//console.log(pAr);
-	runPlayer(pAr, 'H');
-	isOnLo = true;
-}
+me$ap.forEach(theObj => {
+	let play$arr = get$ap(theObj.id);
+	if (!(play$arr === SunZ.at(0))) {
+		pAr = play$arr;
+		//console.log(pAr);
+		runPlayer(pAr, theObj.name);
+		isOnLo = true;
+	}
+})
 
 if (!isOnLo) {
 	document.body.appendChild(scrP);
@@ -64,4 +29,4 @@ if (!isOnLo) {
 	document.body.appendChild(runP);
 }
 
-console.log('俗手runP已加载');
+console.log('runP已加载');
