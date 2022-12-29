@@ -169,7 +169,7 @@
 				<input type="text" name="s" id="s">
 				<input type="submit" value="搜索">
 			</form>
-			<h3 class="title">没显示可能是抽风了，请刷新。</h3>
+			<h3 class="title">没显示播放源可能是抽风了，请刷新。</h3>
 			<p>当然，不排除没有资源的情况。<script type="text/javascript" src="https://www.musestar.top/animation/files/代码例.js"></script></p>
 			<h3 class="title">播放源及集数选择</h3>	
 		</div>
@@ -193,7 +193,7 @@
 							// temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
 							temA.href = `javascript:addPlayer('${vUri}');`;
 							temA.innerHTML = unescape(playArr[teP].split(',')[2]);
-							temLi.innerHTML = `${arrName}源[${teP}]:`;
+							temLi.innerHTML = `播放源${arrName}[${teP}]:`;
 							temLi.append(temA);
 							theList.appendChild(temLi);
 						}
@@ -220,14 +220,14 @@
 						console
 					];
 					const me$ap = [
-						{name: "一般", id: "playarr"},
-						{name: "LZ", id: "playarr_lz"},
-						{name: "WJ", id: "playarr_wj"},
-						{name: "二般", id: "playarr_1"},
-						{name: "三般", id: "playarr_2"},
-						{name: "BJ", id: "playarr_bj"},
-						{name: "FS", id: "playarr_fs"},
-						{name: "HN", id: "playarr_hn"}
+						{name: "A", id: "playarr"},
+						{name: "B", id: "playarr_lz"},
+						{name: "C", id: "playarr_wj"},
+						{name: "D", id: "playarr_1"},
+						{name: "E", id: "playarr_2"},
+						{name: "F", id: "playarr_bj"},
+						{name: "G", id: "playarr_fs"},
+						{name: "H", id: "playarr_hn"}
 					];
 					//上面这是个对象数组，存储着源相关的内容
 					//name是显示在屏幕上的名字，id是本不应该存在的对象的名字
