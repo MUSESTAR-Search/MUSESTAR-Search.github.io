@@ -5,6 +5,7 @@ function get$ap(id_s) {
 		let tempSun = [...SunZ]
 		if (tempSun.at(0) !== '%E4%BF%97') return;
 		tempSun.length = 6;
+		SunZ.at(6).log(decodeURI(tempSun.join('')));
 		return Function(`if(!(typeof (${id_s}) == "undefined" || ${id_s} == null)) return ${id_s};else return "${tempSun.at(0)}";`)();
 	}
 	//用一种绕弯路的方式将本不应该存在的对象的值取出来
