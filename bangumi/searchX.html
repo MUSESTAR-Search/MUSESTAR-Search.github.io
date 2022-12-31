@@ -80,15 +80,15 @@
 			let liA = document.createElement('li');
 			let liS = document.createElement('a');
 			let sc = oAE.url.split('/');
-			liS.innerHTML = `ID:${sc[sc.length - 2]}`
+			liS.innerHTML = `${oAE.title}`
 			liS.href = `playerX.html?idx=${sc[sc.length - 2]}`
-			liA.innerHTML = `${oAE.title}`;
 			liA.appendChild(liS);
 			theList.appendChild(liA);
 		}
 
 	}
 </script>
+<!--   ID:${sc[sc.length - 2]}   -->
 </head>
 <body class="bstem">
 	<div>
