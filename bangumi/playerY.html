@@ -37,8 +37,15 @@
 		autoplay: true,
 		volume: 1.0,
 		video: {
-			url: videoR,
-		},
+        quality: [
+            {
+                name: '缪斯星线路一',
+                url: videoR,
+                type: 'hls',
+            },
+        ],
+        defaultQuality: 0,
+    },
 		contextmenu: [
 			{
 				text: '缪斯星首页',
