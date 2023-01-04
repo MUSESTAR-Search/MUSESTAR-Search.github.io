@@ -36,23 +36,24 @@
 <script src="https://www.musestar.top/files/DPlayer.js"></script>
 <script>
 	var dp = new DPlayer({
-	container: document.getElementById('dplayer'),
-	hotkey: true,
-	preload: 'auto',
-	logo: 'https://www.musestar.top/ms.ico',
-volume: 1.0,
-	video: {
-	url: videoR,
-		   },
-		   contextmenu: [
-{
-	text: '缪斯星首页',
-	link: 'https://www.musestar.top/',
-},
+		container: document.getElementById('dplayer'),
+		hotkey: true,
+		preload: 'auto',
+		logo: 'https://www.musestar.top/ms.ico',
+		autoplay: true,
+		volume: 1.0,
+		video: {
+			url: 'videoR',
+		},
+		contextmenu: [
+			{
+				text: '缪斯星首页',
+				link: 'https://www.musestar.top/',
+			},
 
-],
-			 });
-		</script>
+		],
+	});
+</script>
 </body>
 <script>
 	let sercB = document.createElement('a');
