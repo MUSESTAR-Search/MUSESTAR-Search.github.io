@@ -23,13 +23,6 @@
 		}
 		return false;
 	}
-
-	let videoR = getQueryVariable('vsrc');
-	if (videoR.substring(0, 4) === 'https') {
-		if (window.location.protocol !== 'https:') window.location.protocol = 'https:';
-	} else {
-		if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
-	}
 </script>
 <body>
 <div id="dplayer"></div>
@@ -43,7 +36,7 @@
 		autoplay: true,
 		volume: 1.0,
 		video: {
-			url: 'videoR',
+			url: videoR,
 		},
 		contextmenu: [
 			{
