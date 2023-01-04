@@ -74,6 +74,9 @@
     <script src="https://www.musestar.top/files/hls.js"></script>
     <script src="https://www.musestar.top/files/DPlayer.js"></script>
     <script>
+        if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
+    </script>
+    <script>
         function getQueryVariable(variable) {
             let query = window.location.search.substring(1);
             let vars = query.split("&");
