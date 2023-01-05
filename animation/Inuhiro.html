@@ -199,7 +199,7 @@
                     </div>
                     <p>未显示缪斯星以外的播放源可刷新</p>
                     <ul class="content_playlist clearfix">
-                        <li><a href="https://www.musestar.top/animation/Inuhiro">缪斯星</a></li>
+                        <li><a href="https://www.musestar.top/animation/Inuhiro">缪斯星源</a></li>
                         <ul id="m3u8List">
 
                         </ul>
@@ -241,7 +241,7 @@
             let vUri = playArr[teP].split(',')[0];
             // temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
             temA.href = `javascript:addPlayer('${vUri}');`;
-            temA.innerHTML = `播放源${arrName}第${unescape(playArr[teP].split(',')[2])}集`;
+            temA.innerHTML = `${arrName}源第${unescape(playArr[teP].split(',')[2])}集`;
             temLi.append(temA);
             theList.appendChild(temLi);
         }

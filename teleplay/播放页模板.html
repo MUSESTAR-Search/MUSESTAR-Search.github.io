@@ -240,7 +240,7 @@
             let vUri = playArr[teP].split(',')[0];
             // temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
             temA.href = `javascript:addPlayer('${vUri}');`;
-            temA.innerHTML = `播放源${arrName}第${unescape(playArr[teP].split(',')[2])}集`;
+            temA.innerHTML = `${arrName}源第${unescape(playArr[teP].split(',')[2])}集`;
             temLi.append(temA);
             theList.appendChild(temLi);
         }
