@@ -203,7 +203,7 @@
                     </div>
                     <p><font color="red">未显示缪斯星和天使以外的播放源可刷新</font></p>
                     <ul class="content_playlist clearfix">
-                        <li><a href="https://www.musestar.top/animation/bdonjl">缪斯星源</a></li>
+                        <li><a href="https://www.musestar.top/animation/bdonjl/01">缪斯星源</a></li>
                         <li><a href="javascript:addPlayer('https://bf3.sbdm.cc/runtime/Aliyun/a525a4a8b996856e9fa31b1fac6ffde3.m3u8');">天使源第1集</a></li>
                         <ul id="m3u8List">
 
@@ -252,7 +252,7 @@
     }
     function addPlayer(vUri){
         let temF = document.createElement('iframe')
-        temF.src = (vUri.split('.').pop() === 'html') ? `http://www.musestars.top/bangumi/playerJ.html?vsrc=${vUri}` : `http://www.musestars.top/bangumi/playerY.html?vsrc=${vUri}`;
+        temF.src = (vUri.split('.').pop() === 'html') ? `http://www.musestars.top/bangumi/playerJ.html?vsrc=${vUri}` : `./playerY.html?vsrc=${vUri}`;
         temF.className = 'thePlayer'
         temF.name = 'theEndPlay'
         temF.scrolling = 'no'
