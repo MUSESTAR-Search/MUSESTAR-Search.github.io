@@ -63,19 +63,20 @@
     <meta name="referrer" content="no-referrer">
     <meta charset="UTF-8">
     <meta name="referrer" content="no-referrer">
-    <title>自定义播放SearchXฅ^≧ω≦^ฅ缪斯星搜索</title>
+    <title>最强阴阳师的异世界转生记ฅ^≧ω≦^ฅ缪斯星动漫</title>
     <link rel="shortcut icon" href="https://www.musestar.top/ms.ico">
-    <meta name='keywords' content='自定义播放,动漫,番剧,电影,电视剧,剧集,在线观看,缪斯星,MUSESTAR'>
-    <meta name="description" content="自定义播放">
+    <meta name='keywords' content='最强阴阳师的异世界转生记,番剧,动漫,在线观看,缪斯星,MUSESTAR'>
+    <meta name="description" content="一代阴阳师玖峨晴嘉被人陷害，在临死前领悟到了自己所欠缺的东西并发动秘术转生的诅咒。他转生到了以四属性魔法为独立魔法体系的异世界，而这次的他绝不会重蹈覆辙。">
     <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newstyle.css">
     <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newblue.css" name="skin">
     <link rel="stylesheet" type="text/css" href="https://www.musestar.top/files/newblack.css" name="color">
+    <script type="text/javascript" src="https://www.musestar.top/files/newjquery.min.js"></script>
+    <script src="https://www.musestar.top/files/hls.js"></script>
+    <script src="https://www.musestar.top/files/DPlayer.js"></script>
     <script>
         if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
     </script>
     <script>
-        console.log('俗手出品');
-
         function getQueryVariable(variable) {
             let query = window.location.search.substring(1);
             let vars = query.split("&");
@@ -88,135 +89,206 @@
             return false;
         }
 
-        function ulRender(objArr) {
-            let theList = document.getElementById('theList');
-            for (let oAE of objArr) {
-                let liA = document.createElement('li');
-                let liS = document.createElement('a');
-                let sc = oAE.url.split('/');
-                liS.innerHTML = `${oAE.title}`
-                liS.href = `playerX.html?idx=${sc[sc.length - 2]}&title=${oAE.title}`
-                liA.appendChild(liS);
-                theList.appendChild(liA);
-            }
+        let idx = getQueryVariable('idx');
 
-        }
+        let scrP = document.createElement('script');
+        scrP.src = `//d.gqyy8.com:8077/ne2/s74982.js`;
+        scrP.type = 'text/javascript';
+        document.head.appendChild(scrP);
     </script>
-    <!--   ID:${sc[sc.length - 2]}   -->
-</head>
-<body class="bstem">
-<div>
     <style>
-        body {
-            background: url("https://api.anosu.top/api/?sort=all") no-repeat center center; /*加载背景图*/ /* 背景图不平铺 */
-            background-size: cover; /* 让背景图基于容器大小伸缩 */
-            background-attachment: fixed; /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-            /*!*此条属性必须设置否则可能无效*/
-            background-color: #CCCCCC;
-            /*!* 设置背景颜色，背景图加载过程中会显示背景色 *!*!*!*/
+        .thePlayer{
+            border: 0;
+            width: 100%;
         }
     </style>
-</div>
+</head>
+<body class="bstem">
 <style> body {
     cursor: url('https://www.musestar.top/files/sbzz.png'), auto;
 }</style>
 <script src="https://www.musestar.top/files/sbtx.js"></script>
-<div id="topnav" class="head_box">
-    <div class="header">
-        <div class="head_a">
-            <div class="head_menu_a hidden_xs hidden_mi">
-                <script type="text/javascript" src="https://www.musestar.top/files/newshead.js"></script>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="hot_banner ">
-</div>
-<div class="detail_list_box">
-    <div class="detail_list">
-        <div class="content_box clearfix">
-            <div class="content_thumb fl">
-                <a class="vodlist_thumb lazyload"
-                   style="background-image: url(https://s1.imagehub.cc/images/2022/12/04/2102776ea35145c7dc47fe1c5696c86c.jpeg);"><span
-                        class="play hidden_xs"></span>
-                </a>
-            </div>
-            <div class="content_detail content_top fl">
-                <div class="pannel_head clearfix">
-                    <h1 class="title">自定义播放
-                    </h1>
-                    <p><font color="white">别名：自定义播放</font></p>
-                </div>
-            </div>
-            <div class="content_detail content_min fl">
-                <ul>
-                    <li class="data">
-                        <span class="text_muted hidden_xs">上映时间：</span><a>公元</a><span class="split_line"></span>
-                        <span class="text_muted hidden_xs">地区：</span><a>地球</a><span class="split_line"></span>
-                        <span class="text_muted hidden_xs">类型：</span><a>自定义播放 </a>
-                    </li>
-                    <li class="data"><span></span><a>
+<div id="play_page">
+    <div class="hot_banner">
+        <div id="topnav" class="head_box">
+            <div class="header">
+                <div class="head_a">
+                    <div class="head_menu_a hidden_xs hidden_mi">
                         <script type="text/javascript"
-                                src="https://www.musestar.top/animation/files/代码例.js"></script>
-                    </a></li>
-                    </li>
-                </ul>
-            </div>
-            <div class="content_detail content_min content_btn fl">
-                <div class="playbtn o_play">
-                    <form action="http://www.musestars.top/bangumi/searchX.html">
-                        <span>搜索:</span>
-                        <input type="text" name="s" id="s">
-                        <input type="submit" value="搜索">
-                    </form>
+                                src="https://www.musestar.top/files/newanimationhead.js"></script>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-<div class="container ">
-    <div class="pannel clearfix">
-        <div class="tabs">
-            <div class="content">
-                <div>
+    <div class="play_boxbg">
+        <div class="container">
+            <div class="play_box play_video">
+                <!-- 播放器  -->
+                <div class="left_row fl">
+                    <div>
+                    </div><div class="player_video embed-responsive embed-responsive-16by9 author-qq362695000 clearfix" id="videoF">
+                    请选择播放源及集数
+                </div>
+                    <div class="play_but bline">
+                        <ul>
+                            <li>
+                                <a><font
+                                        color="red">请勿相信视频内的任何广告，右上角缪斯星官方求片报错，无法播放请更换播放源</font></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right_row fr hidden_xs hidden_mi" style="position: relative;">
+                    <div class="play_box_right">
+                        <div class="play_namebox">
+                            <h3 class="title">最强阴阳师的异世界转生记</h3>
+                        </div>
+                        <div class="play_infobox">
+                            <div class="play_vlist cblock">
+                                <div class="play_vlist_thumb vnow lazyload"
+                                     style="background-image: url(https://s1.imagehub.cc/images/2023/01/09/e7f0523688703d5148f03d3df7f4121d.webp)"></div>
+                                <div class="play_vlist_text vnow">
+                                    <p class="play_vlist_title">最强阴阳师的异世界转生记</p>
+                                    <p class="play_vlist_now">
+                                        <script type="text/javascript"
+                                                src="https://www.musestar.top/animation/files/SaikyouOnmyouji.js"></script>
+                                        </script></p>
+                                </div>
+                            </div>
+                        </div>
+                        <img width="auto" height="300" src="https://s1.imagehub.cc/images/2023/01/09/e7f0523688703d5148f03d3df7f4121d.webp">
+                    </div>
+                </div>
+            </div>
+            <!-- end 播放器  -->
+            <div class="play_box">
+                <div class="left_row fl">
+                    <div class="pannel play_pan clearfix">
+                        <div class="player">
+                            <div class="player_detail detail cblock">
+                                <div class="video_title fl">
+                                    <h1 class="title margin_0"><img src="https://www.musestar.top/ms.ico"
+                                                                    width="40" height="40">最强阴阳师的异世界转生记</h1>
+                                </div>
+                            </div>
+                            <div class="play_text">
+                                <p class="nstem data ms_p margin_0">
+                                    <a>日本</a><a>奇幻</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="left_row fl">
+                    <div class="pannel_head clearfix">
+                        <h3 class="title">动漫介绍</h3>
+                    </div>
+                    <p><font size="3">一代阴阳师玖峨晴嘉被人陷害，在临死前领悟到了自己所欠缺的东西并发动秘术转生的诅咒。他转生到了以四属性魔法为独立魔法体系的异世界，而这次的他绝不会重蹈覆辙。</font></p>
+                    <div class="pannel clearfix" id="bofy">
+                        <div class="pannel_head clearfix">
+                            <h3 class="title">播放列表</h3>
+                        </div>
+                        <p>
+                            <script type="text/javascript"
+                                    src="https://www.musestar.top/animation/files/SaikyouOnmyouji.js"></script>
+                        </p>
+                        <h3 class="title">播放源及集数选择</h3>
+                    </div>
+                    <p><font color="red">未显示缪斯星以外的播放源可刷新</font></p>
+                    <ul class="content_playlist clearfix">
+                        <li><a href="https://www.musestar.top/animation/SaikyouOnmyouji/01">缪斯星源</a></li>
+                        <ul id="m3u8List">
+
+                        </ul>
+                    </ul>
+                    <h3 class="title">动漫下载</h3>
+                    <ul class="content_playlist clearfix">
+                        <li>无下载源</li>
+                    </ul>
+                </div>
+                <div class="right_row pa_left fr hidden_xs hidden_mi">
+                    <div class="pannel clearfix">
+                        <div>
+                            <a href="https://jq.qq.com/?_wv=1027&k=o1P4ZyeB" target="_blank"><img width="255" height="auto"src="https://www.musestar.cn/files/gfjlq.jpg"></a></div>
+                    </div>
+
+                    <div class="pannel clearfix">
+                        <div class="pannel_head clearfix">
+                            <h3 class="title">最新上映</h3>
+                        </div>
+                        <ul class="vodlist clearfix">
+                            <script type="text/javascript" src="https://www.musestar.top/files/zxsy.js"></script>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="pannel clearfix">
-        <div class="pannel_head clearfix">
-            <h3 class="title"><font color="red">未显示搜索结果请刷新</font></h3>
-            <p><font color="red">名字太长可能搜不到，请尝试搜索关键词。</font></p>
-            <p>当然，不排除没有资源的情况。</p>
-            <ul class="content_playlist clearfix">
-            </ul>
-            <h3 class="title">搜索结果选择</h3>
-        </div>
-        <ul class="content_playlist clearfix">
-            <ul id="theList">
+</div></div>
+<script type="text/javascript" src="https://www.musestar.top/files/under.js"></script>
+<script>
+    let theList = document.getElementById('m3u8List');
+    let videoF = document.getElementById('videoF');
 
-            </ul>
-        </ul>
-    </div>
-    <div class="pannel ads_box clearfix hide">
-    </div>
-</div>
-    <script type="text/javascript" src="https://www.musestar.top/files/under.js"></script>
-    <script>
-        let tempDo = '';
-        let xmlHttpRequest = new XMLHttpRequest();
-        xmlHttpRequest.onreadystatechange = function () {
-            if (this.status === 200) tempDo = this.responseText;
-        };
-        xmlHttpRequest.onloadend = function () {
-            let parse = JSON.parse(tempDo);
-            //console.log(parse);
-            ulRender(parse);
-        };
-        xmlHttpRequest.open('GET', `http://119.91.125.201:11334/ssszz.php?top=10&q=${getQueryVariable('s')}`);
-        xmlHttpRequest.send();
+    function runPlayer(playArr, arrName) {
+        for (const teP in playArr) {
+            let temLi = document.createElement('li');
+            let temA = document.createElement('a');
+            let vUri = playArr[teP].split(',')[0];
+            // temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
+            temA.href = `javascript:addPlayer('${vUri}');`;
+            temA.innerHTML = `${arrName}源第${unescape(playArr[teP].split(',')[2])}集`;
+            temLi.append(temA);
+            theList.appendChild(temLi);
+        }
+    }
+    function addPlayer(vUri){
+        let temF = document.createElement('iframe')
+        temF.src = (vUri.split('.').pop() === 'html') ? `http://www.musestars.top/bangumi/playerJ.html?vsrc=${vUri}` : `http://www.musestars.top/bangumi/playerY.html?vsrc=${vUri}`;
+        temF.className = 'thePlayer'
+        temF.name = 'theEndPlay'
+        temF.scrolling = 'no'
+        temF.onload = function (){
+            this.height = theEndPlay.document.body.scrollHeight;
+        }
+        videoF.innerHTML = '';
+        videoF.appendChild(temF);
+    }
+    const SunZ = [
+        "%E4%BF%97",
+        "%E6%89%8B%E5%87",
+        "%BA%E5%93%81%EF",
+        "%BC%8C%E7%9B%97",
+        "%E7%94%A8%E6%AD%BB",
+        "%E5%85%A8%E5%AE%B6",
+        "%EF%BC%8C%E7%BC%AA%",
+        "E6%96%AF%E6%98%9F",
+        "%E5%B7%B2%E7%BB",
+        "%8F%E6%8E",
+        "%88%E6%9D%83",
+        console
+    ];
+    const me$ap = [
+        {name: "A", id: "playarr"},
+        {name: "B", id: "playarr_lz"},
+        {name: "C", id: "playarr_wj"},
+        {name: "D", id: "playarr_1"},
+        {name: "F", id: "playarr_bj"},
+        {name: "G", id: "playarr_fs"},
+        {name: "H", id: "playarr_hn"}
+    ];
+    //上面这是个对象数组，存储着源相关的内容
+    //name是显示在屏幕上的名字，id是本不应该存在的对象的名字
+    function crUl() {
+        theList.innerHTML = '';
+    }
 
-    </script>
+    let pAr;
+    let isOnLo = false;
+
+</script>
+<script src="http://www.musestars.top/bangumi/runP.js"></script>
 </body>
 </html>
