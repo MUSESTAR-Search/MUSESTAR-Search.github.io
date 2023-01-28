@@ -40,14 +40,14 @@
 </body>
 <script>
 	let videoF = document.createElement('iframe');
-	videoF.src = `https://bf.sbdm.cc/m3u8.php?url=${videoR}`;
+	videoF.src = `http://ss3.quelingfei.com:8080/wap.php?url=${videoR}`;
 	videoF.className = 'theFv';
 	document.body.appendChild(videoF);
 </script>
 <script>
     let sercC = document.createElement('a');
     sercC.className = 'sercC';
-    sercC.innerHTML = "不能播放？点我切换播放器Z试试。";
+    sercC.innerHTML = "不能全屏？点我切换播放器Z试试。";
     sercC.href = `playerZ.html?vsrc=${videoR}`;
     document.body.appendChild(sercC);
 </script>
