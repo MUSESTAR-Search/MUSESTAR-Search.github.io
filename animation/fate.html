@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────────▇▇▇▇▇▇▇▇▇
+▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇──────▇▇▇▇▇──────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇────▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇────▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇─────▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─▇▇─▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇─────▇▇▇▇▇▇──▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──────▇▇▇▇───▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇───▇▇▇▇──▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇────▇▇▇──▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇───▇▇───▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇───▇▇──▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇──────▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇─────▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇─▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇▇────▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇▇───▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇
+▇▇▇▇▇───▇▇▇▇▇──▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────────▇▇▇▇▇▇▇▇
+▇▇▇▇──────▇▇▇─▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇─────▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇──▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇────▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─▇▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇──────▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇──▇▇─▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇─────▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────▇▇▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+-->
+<html>
+<head>
+    <!-- Clarity tracking code for https://www.musestar.cc/ -->
+    <script>    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () {
+            (c[a].q = c[a].q || []).push(arguments)
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "fvlvixulu7");</script>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>命运/奇异赝品 黎明低语ฅ^≧ω≦^ฅ缪斯星动漫</title>
+    <link rel="shortcut icon" href="https://www.musestar.cc/favicon.ico">
+    <meta name='keywords' content='命运/奇异赝品 黎明低语,番剧,动漫,在线观看,缪斯星,MUSESTAR'>
+    <meta name="description" content="魔术师们为追寻实现一切心愿的愿望机「圣杯」，而召唤英灵借以彼此竞争的争夺战──圣杯战争。于日本这片土地举行的第五次圣杯战争终结后数年，美国西部雪原市(史诺菲尔德)出现下一场斗争──那是充满虚伪的圣杯战争。
+　　聚集于虚伪台座的魔术师与英灵们。即使深知这是场虚伪的圣杯战争──他们仍旧在此之上不断舞动。真伪即在遥远的彼岸。并非为了圣杯──也非为其他任何事物，而是为贯彻他们自身的信念。然而就在此刻，注满容器的究竟是虚伪或真实，还是说……
+　　TYPE-MOON高人气视觉小说「Fate」，由成田良悟所描绘的新篇章！">
+    <link rel="stylesheet" type="text/css" href="https://www.musestar.cc/files/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="https://www.musestar.cc/files/newblue.css" name="skin">
+    <link rel="stylesheet" type="text/css" href="https://www.musestar.cc/files/newblack.css" name="color">
+    <script type="text/javascript" src="https://www.musestar.cc/files/newjquery.min.js"></script>
+    <script src="https://www.musestar.cc/files/hls.js"></script>
+    <script src="https://www.musestar.cc/files/DPlayer.js"></script>
+    <script>
+  if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
+    </script>
+    <script>
+        function getQueryVariable(variable) {
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (let i = 0; i < vars.length; i++) {
+                let pair = vars[i].split("=");
+                if (pair[0] === variable) {
+                    return pair[1];
+                }
+            }
+            return false;
+        }
+
+        let idx = getQueryVariable('idx');
+
+        let scrP = document.createElement('script');
+        scrP.src = `//d.gqyy8.com:8077/ne2/s65137.js`;
+        scrP.type = 'text/javascript';
+        document.head.appendChild(scrP);
+    </script>
+    <style>
+        .thePlayer{
+            border: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bstem">
+<style> body {
+    cursor: url('https://www.musestar.cc/files/sbzz.png'), auto;
+}</style>
+<script src="https://www.musestar.cc/files/sbtx.js"></script>
+<div id="play_page">
+    <div class="hot_banner">
+        <div id="topnav" class="head_box">
+            <div class="header">
+                <div class="head_a">
+                    <div class="head_menu_a hidden_xs hidden_mi">
+                        <script type="text/javascript"
+                                src="https://www.musestar.cc/files/newanimationhead.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="play_boxbg">
+        <div class="container">
+            <div class="play_box play_video">
+                <!-- 播放器  -->
+                <div class="left_row fl">
+                    <div>
+                    </div><div class="player_video embed-responsive embed-responsive-16by9 author-qq362695000 clearfix" id="videoF">
+                    请选择播放源及集数
+                </div>
+                    <div class="play_but bline">
+                        <ul>
+                            <li>
+                                <a><font
+                                        color="red">请勿相信视频内的任何广告，右上角缪斯星官方求片报错</font></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right_row fr hidden_xs hidden_mi" style="position: relative;">
+                    <div class="play_box_right">
+                        <div class="play_namebox">
+                            <h3 class="title">命运/奇异赝品 黎明低语</h3>
+                        </div>
+                        <div class="play_infobox">
+                            <div class="play_vlist cblock">
+                                <div class="play_vlist_thumb vnow lazyload"
+                                     style="background-image: url(https://s1.imagehub.cc/images/2023/07/19/fate.webp)"></div>
+                                <div class="play_vlist_text vnow">
+                                    <p class="play_vlist_title">命运/奇异赝品 黎明低语</p>
+                                    <p class="play_vlist_now">
+                                        <script type="text/javascript"
+                                                src="https://www.musestar.cc/animation/files/fate.js"></script>
+                                        </script></p>
+                                </div>
+                            </div>
+                        </div>
+                        <img width="auto" height="300" src="https://s1.imagehub.cc/images/2023/07/19/fate.webp">
+                    </div>
+                </div>
+            </div>
+            <!-- end 播放器  -->
+            <div class="play_box">
+                <div class="left_row fl">
+                    <div class="pannel play_pan clearfix">
+                        <div class="player">
+                            <div class="player_detail detail cblock">
+                                <div class="video_title fl">
+                                    <h1 class="title margin_0"><img src="https://www.musestar.cc/files/ms.png"
+                                                                    width="40" height="40">命运/奇异赝品 黎明低语</h1>
+                                </div>
+                            </div>
+                            <div class="play_text">
+                                <p class="nstem data ms_p margin_0">
+                                    <a>日本</a><a>奇幻</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="left_row fl">
+                    <div class="pannel_head clearfix">
+                        <h3 class="title">动漫介绍</h3>
+                    </div>
+                    <p><font size="3">魔术师们为追寻实现一切心愿的愿望机「圣杯」，而召唤英灵借以彼此竞争的争夺战──圣杯战争。于日本这片土地举行的第五次圣杯战争终结后数年，美国西部雪原市(史诺菲尔德)出现下一场斗争──那是充满虚伪的圣杯战争。
+　　聚集于虚伪台座的魔术师与英灵们。即使深知这是场虚伪的圣杯战争──他们仍旧在此之上不断舞动。真伪即在遥远的彼岸。并非为了圣杯──也非为其他任何事物，而是为贯彻他们自身的信念。然而就在此刻，注满容器的究竟是虚伪或真实，还是说……
+　　TYPE-MOON高人气视觉小说「Fate」，由成田良悟所描绘的新篇章！</font></p>
+                    <div class="pannel clearfix" id="bofy">
+                        <div class="pannel_head clearfix">
+                            <h3 class="title">播放列表</h3>
+                            <h3 class="title"><font color="red">未显示播放源请多刷新几次或更换浏览器，安卓手机建议夸克</font></h3>
+                        </div>
+                        <p>
+                            <script type="text/javascript"
+                                    src="https://www.musestar.cc/animation/files/fate.js"></script>
+                        </p>
+                                                <ul class="content_playlist clearfix">
+                            <li><a href="https://mzh.moegirl.org.cn/Fate/strange%20Fake#.E5.90.84.E8.AF.9D.E6.A0.87.E9.A2.98" target="_blank">查看更新进度</a></li>
+                            <li><a href="https://www.musestar.cn/index.php/2023/03/18/browser/" target="_blank">浏览器下载</a></li>
+                        </ul>
+                        <h3 class="title">播放源及集数选择</h3>
+                        <h3 class="title"><font color="red">无法播放请更换播放源</font></h3>
+                    </div>
+                    <ul class="content_playlist clearfix">
+                        <li><a href="https://www.musestar.cc/animation/fate/SP">缪斯星源</a></li>
+                        <ul id="m3u8List">
+
+                        </ul>
+                    </ul>
+
+                </div>
+                <div class="right_row pa_left fr hidden_xs hidden_mi">
+                    <div class="pannel clearfix">
+                        <div>
+                            <a href="右栏href" target="_blank"><img width="320" height="auto"src="https://www.musestar.cn/files/右栏src.jpg"></a></div>
+                    </div>
+
+                    <div class="pannel clearfix">
+                        <div class="pannel_head clearfix">
+                            <h3 class="title">推荐观看</h3>
+                        </div>
+                        <ul class="vodlist clearfix">
+                            <script type="text/javascript" src="https://www.musestar.cc/files/tjgk.js"></script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+<script type="text/javascript" src="https://www.musestar.cc/files/under.js"></script>
+<script>
+    let theList = document.getElementById('m3u8List');
+    let videoF = document.getElementById('videoF');
+
+    function runPlayer(playArr, arrName) {
+        for (const teP in playArr) {
+            let temLi = document.createElement('li');
+            let temA = document.createElement('a');
+            let vUri = playArr[teP].split(',')[0];
+            // temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
+            temA.href = `javascript:addPlayer('${vUri}');`;
+            temA.innerHTML = `${arrName}源第${unescape(playArr[teP].split(',')[2])}集`;
+            temLi.append(temA);
+            theList.appendChild(temLi);
+        }
+    }
+    function addPlayer(vUri){
+        let temF = document.createElement('iframe')
+        temF.src = (vUri.split('.').pop() === 'html') ? `http://www.musestars.top/bangumi/playerJ.html?vsrc=${vUri}` : `http://www.musestars.top/bangumi/playerY.html?vsrc=${vUri}`;
+        temF.className = 'thePlayer'
+        temF.name = 'theEndPlay'
+        temF.scrolling = 'no'
+        temF.onload = function (){
+            this.height = theEndPlay.document.body.scrollHeight;
+        }
+        videoF.innerHTML = '';
+        videoF.appendChild(temF);
+    }
+    const SunZ = [
+        "%E4%BF%97",
+        "%E6%89%8B%E5%87",
+        "%BA%E5%93%81%EF",
+        "%BC%8C%E7%9B%97",
+        "%E7%94%A8%E6%AD%BB",
+        "%E5%85%A8%E5%AE%B6",
+        "%EF%BC%8C%E7%BC%AA%",
+        "E6%96%AF%E6%98%9F",
+        "%E5%B7%B2%E7%BB",
+        "%8F%E6%8E",
+        "%88%E6%9D%83",
+        console
+    ];
+    const me$ap = [
+        {name: "推荐", id: "playarr_lz"},
+        {name: "A", id: "playarr_hn"},
+        {name: "B", id: "playarr_2"},
+        {name: "C", id: "playarr_wj"},
+        {name: "D", id: "playarr_1"},
+        {name: "E", id: "playarr_fs"},
+        {name: "F", id: "playarr_bj"},
+        {name: "G", id: "playarr"},
+    ];
+    //上面这是个对象数组，存储着源相关的内容
+    //name是显示在屏幕上的名字，id是本不应该存在的对象的名字
+    function crUl() {
+        theList.innerHTML = '';
+    }
+
+    let pAr;
+    let isOnLo = false;
+
+</script>
+<script src="http://www.musestars.top/bangumi/runP.js"></script>
+</body>
+</html>
