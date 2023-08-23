@@ -74,7 +74,7 @@
     <script src="https://www.musestar.cc/files/hls.js"></script>
     <script src="https://www.musestar.cc/files/DPlayer.js"></script>
     <script>
-        if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
+        //if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
     </script>
     <script>
         function getQueryVariable(variable) {
@@ -102,6 +102,57 @@
             width: 100%;
         }
     </style>
+        <script>
+            console.log('俗手出品，缪斯星授权');
+    
+            function getQueryVariable(variable) {
+                let query = window.location.search.substring(1);
+                let vars = query.split("&");
+                for (let i = 0; i < vars.length; i++) {
+                    let pair = vars[i].split("=");
+                    if (pair[0] === variable) {
+                        return pair[1];
+                    }
+                }
+                return false;
+            }
+    
+            function ulRender(objArr) {
+                let msimg = document.getElementById('msimg');
+                for (let oAE of objArr) {
+                    let sc = oAE.url.split('/');
+
+                    let imgA = document.createElement('img');
+                    imgA.src = `${oAE.thumb}`
+                    imgA.height = `300`
+                    msimg.appendChild(imgA);
+
+                    let msimg2 = document.getElementById('msimg2');
+                    let imgA2 = document.createElement('div');
+                    imgA2.className = `play_vlist_thumb vnow lazyload`
+                    imgA2.style = `background-image: url(${oAE.thumb})`
+                    msimg2.appendChild(imgA2);
+
+                    let msp = document.getElementById('msp');
+                    let pA = document.createElement('p');
+                    pA.className = `play_vlist_now`
+                    pA.innerHTML = `连载集数：${oAE.lianzaijs}集`
+                    msp.appendChild(pA);
+                    
+                    let msp2 = document.getElementById('msp2');
+                    let pA2 = document.createElement('p');
+                    pA2.className = `nstem data ms_p margin_0`
+                    pA2.innerHTML = `<a>${oAE.area}</a> <a>${oAE.time}</a>`
+                    msp2.appendChild(pA2);
+
+                    let msp3 = document.getElementById('msp3');
+                    let pA3 = document.createElement('p');
+                    pA3.innerHTML = `<font size="3">${oAE.star}</font>`
+                    msp3.appendChild(pA3);
+                }
+    
+            }
+        </script>
 </head>
 <body class="bstem">
 
@@ -146,19 +197,17 @@
                         </div>
                         <div class="play_infobox">
                             <div class="play_vlist cblock">
-                                <div class="play_vlist_thumb vnow lazyload"
-                                     style="background-image: url(https://s1.imagehub.cc/images/2022/12/04/2102776ea35145c7dc47fe1c5696c86c.jpeg)"></div>
+                                <ul id="msimg2">
+                                </ul> 
                                 <div class="play_vlist_text vnow">
                                     <p class="play_vlist_title thePlayerTitle">标题</p>
-                                    <p class="play_vlist_now">
-                                        <script type="text/javascript"
-                                                src="https://www.musestar.cc/animation/files/代码例.js"></script>
-                                        </script></p>
+                                    <ul id="msp">
+                                    </ul> 
                                 </div>
                             </div>
                         </div>
-                        <img width="auto" height="300"
-                             src="https://s1.imagehub.cc/images/2022/12/04/2102776ea35145c7dc47fe1c5696c86c.jpeg">
+                        <ul id="msimg">
+                        </ul> 
                     </div>
                 </div>
             </div>
@@ -175,9 +224,8 @@
                                 </div>
                             </div>
                             <div class="play_text">
-                                <p class="nstem data ms_p margin_0">
-                                    <a>自定义</a><a>搜索</a>
-                                </p>
+                                <ul id="msp2">
+                                </ul> 
                             </div>
                         </div>
                     </div>
@@ -196,6 +244,11 @@
                                                 <ul class="content_playlist clearfix">
                             <li><a href="https://www.musestar.cn/index.php/2023/03/18/browser/" target="_blank">浏览器下载</a></li>
                         </ul>
+                        <div class="pannel_head clearfix">
+                            <h3 class="title">主演</h3>
+                            <ul id="msp3">
+                            </ul> 
+                        </div>
                         <h3 class="title">播放源及集数选择</h3>
                         <h3 class="title"><font color="red">无法播放请更换播放源</font></h3>
                     </div>
@@ -226,7 +279,7 @@
 </div></div>
 <script type="text/javascript" src="https://www.musestar.cc/files/under.js"></script>
 <script>
-    let theList = document.getElementById('m3u8List');
+    let msimg = document.getElementById('m3u8List');
     let videoF = document.getElementById('videoF');
 
     function runPlayer(playArr, arrName) {
@@ -238,7 +291,7 @@
             temA.href = `javascript:addPlayer('${vUri}');`;
             temA.innerHTML = `${arrName}源第${unescape(playArr[teP].split(',')[2])}集`;
             temLi.append(temA);
-            theList.appendChild(temLi);
+            msimg.appendChild(temLi);
         }
     }
 
@@ -282,7 +335,7 @@
     //上面这是个对象数组，存储着源相关的内容
     //name是显示在屏幕上的名字，id是本不应该存在的对象的名字
     function crUl() {
-        theList.innerHTML = '';
+        msimg.innerHTML = '';
     }
 
     let pAr;
@@ -301,6 +354,21 @@
     document.title = `${qwer}ฅ^≧ω≦^ฅ缪斯星搜索`
 
 </script>
-<script src="runP.js"></script>
+<script src="runP.j"></script>
+<script>
+    let tempDo = '';
+    let xmlHttpRequest = new XMLHttpRequest();
+    xmlHttpRequest.onreadystatechange = function () {
+        if (this.status === 200) tempDo = this.responseText;
+    };
+    xmlHttpRequest.onloadend = function () {
+        let parse = JSON.parse(tempDo);
+        //console.log(parse);
+        ulRender(parse);
+    };
+    xmlHttpRequest.open('GET', `http://119.91.125.201:11334/ssszz.php?top=10&q=${getQueryVariable('title')}`);
+    xmlHttpRequest.send();
+
+</script>
 </body>
 </html>
