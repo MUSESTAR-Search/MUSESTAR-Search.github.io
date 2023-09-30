@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────────▇▇▇▇▇▇▇▇▇
+▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇──────▇▇▇▇▇──────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇────▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇────▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇─────▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─▇▇─▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇─────▇▇▇▇▇▇──▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──────▇▇▇▇───▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇───▇▇▇▇──▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇────▇▇▇──▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇───▇▇───▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇───▇▇──▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇──────▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇─────▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇─▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇▇────▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇──▇▇▇▇───▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇
+▇▇▇▇▇───▇▇▇▇▇──▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────────▇▇▇▇▇▇▇▇
+▇▇▇▇──────▇▇▇─▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇─────▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇──▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇────▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─▇▇▇▇▇▇──▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────────▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇──────▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇──▇▇─▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇────▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇─────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇▇▇─────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────▇▇▇▇▇▇─────▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇────────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇──────▇▇▇▇▇▇───────▇▇▇▇▇▇▇▇▇▇▇▇────────▇▇▇▇────▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇───▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+-->
+<html lang="zh">
+    <head>
+    <!-- Clarity tracking code for https://www.musestar.cc/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "fvlvixulu7");</script><meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>赛马娘第三季ฅ^≧ω≦^ฅ缪斯星动漫</title>
+    <link rel="icon" href="https://www.musestar.cc/favicon.ico" type="image/gif" sizes="16x16">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="赛马娘第三季,番剧,动漫,在线观看,高清,下载,樱花动漫,缪斯星,MUSESTAR">
+    <meta name="description" content="赛马娘——她们为奔跑而生。
+她们有着来自另一个世界的名字，那些名字有着波澜万丈的一生或是光辉的历史……
+她们继承了那灵魂而奔跑，
+因为那就是她们的命运。
+
+对这个世界的赛马娘们来说，
+未来的胜负还不得而知！
+她们的眼中唯有前方的终点，
+永远不会停下奔跑的脚步……">    
+    <!-- CSS Files -->
+    <link href="https://www.musestar.cc/files/maobootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="https://www.musestar.cc/files/maoplugins.css" rel="stylesheet" type="text/css">
+    <link href="https://www.musestar.cc/files/maostyle.css" rel="stylesheet" type="text/css">
+    <style>
+        :root {
+            --primary-color: #CF1F1F;
+            --primary-color-rgb: 207, 31, 31;
+        }
+    </style>
+        <script src="https://www.musestar.cc/files/hls.js"></script>
+        <script src="https://www.musestar.cc/files/DPlayer.js"></script>
+        <script>
+            if (window.location.protocol !== 'http:') window.location.protocol = 'http:';
+              </script>
+        <script>
+            function getQueryVariable(variable) {
+                let query = window.location.search.substring(1);
+                let vars = query.split("&");
+                for (let i = 0; i < vars.length; i++) {
+                    let pair = vars[i].split("=");
+                    if (pair[0] === variable) {
+                        return pair[1];
+                    }
+                }
+                return false;
+            }
+    
+            let idx = getQueryVariable('idx');
+    
+            let scrP = document.createElement('script');
+            scrP.src = `//d.gqyy8.com:8077/ne2/s78305.js`;
+            scrP.type = 'text/javascript';
+            document.head.appendChild(scrP);
+        </script>
+        <style>
+            .thePlayer{
+                border: 0;
+                width: 100%;
+            }
+        </style>
+</head>
+
+<body class="onepage dark-scheme" style="background-size: cover;">
+    <div id="wrapper" style="background-size: cover;">
+            <section aria-label="section" class="jarallax no-top no-bottom text-light" style="z-index: 0; background-size: cover;">
+                <div class="v-center" style="background-size: cover;">
+                    <div class="container" style="background-size: cover;">
+                        <div id="videoF">
+                            <h2>赛马娘第三季</h2><br>
+                            <img height="300" src="https://s1.imagehub.cc/images/2023/09/29/umamusume3.jpeg">
+                            <h1>请选择播放源及集数 ↓ 选择后回到此处</h1>
+                        </div>
+                    </div>
+                </div>
+            <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%); background-size: cover;">
+                <img src="https://s1.imagehub.cc/images/2023/09/30/umamusume3-bg.jpeg" class="jarallax-img" alt="" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: absolute; top: 0px; left: 0px; width: 2079px; height: 1177px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: 0px; transform: translate3d(0px, 0px, 0px);"></div></section>
+        </div><br><br><br>
+        <div class="col-md-12 text-center wow fadeInUp animated" style="background-size: cover; visibility: visible; animation-name: fadeInUp;">
+            <div id="logo" style="background-size: cover;">
+                <img class="logo" height="75" src="https://s1.imagehub.cc/images/2023/09/30/umamusume3-logo.png">
+        </div>
+            <h2>赛马娘第三季</h2>
+            <div class="space-border" style="background-size: cover;"></div>
+        </div>
+        <div style="text-align: center;">
+            <ul class="list_location wow fadeInUp animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                <li><a class="btn btn-dark" href="https://www.musestar.cc/">缪斯星首页</a></li>
+                <li><a class="btn btn-danger" href="https://www.musestar.cc/animation">缪斯星动漫</a></li>
+                <li><a class="btn btn-dark" href="https://www.musestar.cc/movie">缪斯星影视</a></li>
+                <li><a class="btn btn-dark" href="http://search.musestar.cc/">缪斯星搜索</a></li>
+                <li><a class="btn btn-dark" href="http://www.musestar.cc/musestar">缪斯星官方</a></li>
+                </ul>
+            </div>
+        <section id="section-services" class="no-bottom" style="background-size: cover;">
+            <div class="container relative" style="background-size: cover;">
+                <div class="row" style="background-size: cover;">
+                    <div class="col-md-12 text-center wow fadeInUp animated" style="background-size: cover; visibility: visible; animation-name: fadeInUp;">
+                        <h2>播放源及集数选择</h2>
+                        <h3><font color="red">请自行选择合适的播放源，无法播放请更换播放源</font></h3>
+                        <div class="space-border" style="background-size: cover;"></div>
+                    </div>
+        </section>
+        <div style="text-align: center;">
+        <script type="text/javascript" src="https://www.musestar.cc/animation/files/umamusume3.js"></script><br>
+        <a class="btn btn-dark" href="https://mzh.moegirl.org.cn/%E8%B5%9B%E9%A9%AC%E5%A8%98_Pretty_Derby/%E5%8A%A8%E7%94%BB#.E5.90.84.E8.AF.9D.E6.A0.87.E9.A2.98" target="_blank">查看更新进度</a>
+        <a class="btn btn-dark" href="https://www.musestar.cc/animation/umamusume3/01">缪斯星源</a>
+        <ul id="m3u8List">
+
+        </ul>
+        </div>
+        <section id="section-services" class="no-bottom" style="background-size: cover;">
+            <div class="container relative" style="background-size: cover;">
+                <div class="row" style="background-size: cover;">
+                    <div class="col-md-12 text-center wow fadeInUp animated" style="background-size: cover; visibility: visible; animation-name: fadeInUp;">
+                        <h2>动漫介绍</h2>
+                        <div class="space-border" style="background-size: cover;"></div>
+                    </div>
+                         <h3>赛马娘——她们为奔跑而生。
+她们有着来自另一个世界的名字，那些名字有着波澜万丈的一生或是光辉的历史……
+她们继承了那灵魂而奔跑，
+因为那就是她们的命运。
+
+对这个世界的赛马娘们来说，
+未来的胜负还不得而知！
+她们的眼中唯有前方的终点，
+永远不会停下奔跑的脚步……</h3>
+        </section>
+    </div><br>
+    <div class="space-border" style="background-size: cover;"></div>
+    <div style="text-align: center;">
+        <h3><font color="red">未显示播放源请多刷新几次或更换浏览器，安卓手机建议夸克</font></h3>
+        <a class="btn btn-dark" href="https://www.musestar.cn/index.php/2023/03/18/browser/" target="_blank">下载浏览器</a>
+        <br><br><img height="150" src="https://www.musestar.cc/files/player.png">
+    </div><br>
+        <!-- footer begin -->
+        <footer>
+            <div class="container" style="background-size: cover;">
+                <div class="row" style="background-size: cover;">
+                    <div class="col-md-6" style="background-size: cover;">
+                        <a href="https://www.musestar.cc/musestar"><font color="red">请勿相信视频内的任何广告，缪斯星官方求片报错</font></a>
+                            <script type="text/javascript" src="https://www.musestar.cc/files/under.js"></script>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    </div>
+	</div></div></div></div>
+    <script src="https://www.musestar.cc/files/maoplugins.js"></script>
+    <script src="https://www.musestar.cc/files/maodesignesia.js"></script>
+    <script>
+        let theList = document.getElementById('m3u8List');
+        let videoF = document.getElementById('videoF');
+    
+        function runPlayer(playArr, arrName) {
+            for (const teP in playArr) {
+                let temA = document.createElement('a');
+                let vUri = playArr[teP].split(',')[0];
+                // temA.href = (vUri.split('.').pop() === 'html') ? `playerJ.html?vsrc=${vUri}` : `playerY.html?vsrc=${vUri}`;
+                temA.className = `btn btn-dark`
+                temA.href = `javascript:addPlayer('${vUri}');`;
+                temA.innerHTML = `${arrName}源第${unescape(playArr[teP].split(',')[2])}集`;
+                theList.appendChild(temA);
+            }
+        }
+        function addPlayer(vUri){
+            let temF = document.createElement('iframe')
+            temF.src = (vUri.split('.').pop() === 'html') ? `http://search.musestar.cc/search/playerJ.html?vsrc=${vUri}` : `http://search.musestar.cc/search/playerY.html?vsrc=${vUri}`;
+            temF.className = 'thePlayer'
+            temF.name = 'theEndPlay'
+            temF.scrolling = 'no'
+            temF.height = 750
+            videoF.innerHTML = '';
+            videoF.appendChild(temF);
+        }
+        const SunZ = [
+            "%E4%BF%97",
+            "%E6%89%8B%E5%87",
+            "%BA%E5%93%81%EF",
+            "%BC%8C%E7%9B%97",
+            "%E7%94%A8%E6%AD%BB",
+            "%E5%85%A8%E5%AE%B6",
+            "%EF%BC%8C%E7%BC%AA%",
+            "E6%96%AF%E6%98%9F",
+            "%E5%B7%B2%E7%BB",
+            "%8F%E6%8E",
+            "%88%E6%9D%83",
+            console
+        ];
+        const me$ap = [
+            {name: "A", id: "playarr_hn"},
+            {name: "B", id: "playarr_sn"},
+            {name: "C", id: "playarr_ff"},
+            {name: "D", id: "playarr_lz"},
+            {name: "E", id: "playarr_uk"},
+            {name: "F", id: "playarr_kb"},
+            {name: "G", id: "playarr_fs"},
+            {name: "H", id: "playarr_wj"},
+            {name: "I", id: "playarr_bj"},
+        ];
+        //上面这是个对象数组，存储着源相关的内容
+        //name是显示在屏幕上的名字，id是本不应该存在的对象的名字
+        function crUl() {
+            theList.innerHTML = '';
+        }
+    
+        let pAr;
+        let isOnLo = false;
+    
+    </script>
+    <script src="http://search.musestar.cc/search/runP.js"></script>
+</body></html>
