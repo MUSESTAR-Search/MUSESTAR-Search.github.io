@@ -26,7 +26,7 @@ if (!isOnLo) {
 	let runP = document.createElement('script');
 	runP.src = 'runP.js';
 	runP.type = 'text/javascript';
-	document.body.appendChild('http://search.musestar.cc/search/runP.js');
+	document.body.appendChild(runP);
 }
 
 console.log('runP已加载');
