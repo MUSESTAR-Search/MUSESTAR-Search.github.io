@@ -157,10 +157,18 @@
                             </div>
                             <div class="spacer-20" style="background-size: cover;"></div>
                             <ul class="list_location wow fadeInUp animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                                <form action="search/searchX.html">
+                                  <form action="search/searchX.html">
                                     <input type="text" class="btn btn-dark" name="s" id="s">
-                                    <input type="submit" class="btn btn-danger" value="进行缪斯星搜索">
+                                    <input type="submit" class="btn btn-danger" value="缪斯星第三方搜索">
                                 </form>
+                                <br>
+                                <form class="navbar-form navbar-right site-search" action="http://cn.bing.com/search">
+                                    <div class="form-group">
+                                      <input type="text" name="query" class="btn btn-dark">
+                                      <input type="hidden" class="realQuery" name="q">
+                                      <button type="submit" class="btn btn-danger">缪斯星官方源搜索</button>
+                                    </div>
+                                  </form>
                             </ul>
                         </div>
                     </div>
@@ -324,6 +332,28 @@
             });
         });
     });
+    </script>
+    <script>
+        var OurJS = window.OurJS = window.OurJS || {};
+
+OurJS.Search = (function() {
+  var $siteSearchForm = $('.site-search')
+  var $inputQuery = $siteSearchForm.find('input')
+  var $realQuery = $siteSearchForm.find('.realQuery')
+  var $btnSubmit = $siteSearchForm.find('.btn')
+
+  var updateQuery = function(e) {
+    var query = $inputQuery.val()
+
+    $realQuery.val(query + ' site:www.musestar.cc')
+  }
+
+  $inputQuery.on('keyup', updateQuery)
+  $btnSubmit.on('click', updateQuery)
+
+  updateQuery()
+
+})();
     </script>
 	</div></div>
 </body></html>
