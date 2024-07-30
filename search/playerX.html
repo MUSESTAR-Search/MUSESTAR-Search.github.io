@@ -48,8 +48,22 @@
 ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
 -->
 <html lang="zh">
-    <head>
-    <!-- Clarity tracking code for https://musestar.cc/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "fvlvixulu7");</script><meta charset="UTF-8">
+
+<head>
+    <!-- Clarity tracking code for https://musestar.cc/ -->
+    <script>
+        (function(c, l, a, r, i, t, y) {
+            c[a] = c[a] || function() {
+                (c[a].q = c[a].q || []).push(arguments)
+            };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "fvlvixulu7");
+    </script>
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>标题ฅ^≧ω≦^ฅ缪斯星搜索</title>
     <link rel="icon" href="https://musestar.cc/favicon.ico" type="image/gif" sizes="16x16">
@@ -66,146 +80,159 @@
             --primary-color-rgb: 207, 31, 31;
         }
     </style>
-        <script>
-          //  //
-              </script>
-        <script>
-            function getQueryVariable(variable) {
-                let query = window.location.search.substring(1);
-                let vars = query.split("&");
-                for (let i = 0; i < vars.length; i++) {
-                    let pair = vars[i].split("=");
-                    if (pair[0] === variable) {
-                        return pair[1];
-                    }
+    <script>
+        //  //
+    </script>
+    <script>
+        function getQueryVariable(variable) {
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (let i = 0; i < vars.length; i++) {
+                let pair = vars[i].split("=");
+                if (pair[0] === variable) {
+                    return pair[1];
                 }
-                return false;
             }
-    
-            let idx = getQueryVariable('idx');
-    
-            let scrP = document.createElement('script');
-            scrP.src = `//d.gqyy8.com:8077/ne2/s${idx}.js`;
-            scrP.type = 'text/javascript';
-            document.head.appendChild(scrP);
-        </script>
-        <style>
-            .thePlayer {
-                border: 0;
-                width: 100%;
+            return false;
+        }
+
+        let idx = getQueryVariable('idx');
+
+        let scrP = document.createElement('script');
+        scrP.src = `//d.gqyy8.com:8077/ne2/s${idx}.js`;
+        scrP.type = 'text/javascript';
+        document.head.appendChild(scrP);
+    </script>
+    <style>
+        .thePlayer {
+            border: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        console.log('俗手出品，缪斯星授权');
+
+        function getQueryVariable(variable) {
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (let i = 0; i < vars.length; i++) {
+                let pair = vars[i].split("=");
+                if (pair[0] === variable) {
+                    return pair[1];
+                }
             }
-        </style>
-            <script>
-                console.log('俗手出品，缪斯星授权');
-        
-                function getQueryVariable(variable) {
-                    let query = window.location.search.substring(1);
-                    let vars = query.split("&");
-                    for (let i = 0; i < vars.length; i++) {
-                        let pair = vars[i].split("=");
-                        if (pair[0] === variable) {
-                            return pair[1];
-                        }
-                    }
-                    return false;
-                }
-        
-                function ulRender(objArr) {
-                    let msimg = document.getElementById('msimg');
-                    for (let oAE of objArr) {
-                        let sc = oAE.url.split('/');
-    
-                        let imgA = document.createElement('img');
-                    imgA.src = `${oAE.thumb}`
-                    imgA.height = `300`
-                    msimg.appendChild(imgA);
-    
-                        let msp = document.getElementById('msp');
-                        let pA = document.createElement('p');
-                        pA.innerHTML = `连载集数：${oAE.lianzaijs}`
-                        msp.appendChild(pA);
-                    }
-        
-                }
-            </script>
+            return false;
+        }
+
+        function ulRender(objArr) {
+            let msimg = document.getElementById('msimg');
+            for (let oAE of objArr) {
+                let sc = oAE.url.split('/');
+
+                let imgA = document.createElement('img');
+                imgA.src = `${oAE.thumb}`
+                imgA.height = `300`
+                msimg.appendChild(imgA);
+
+                let msp = document.getElementById('msp');
+                let pA = document.createElement('p');
+                pA.innerHTML = `连载集数：${oAE.lianzaijs}`
+                msp.appendChild(pA);
+            }
+
+        }
+    </script>
 </head>
 
 <body class="onepage dark-scheme" style="background-size: cover;">
     <div id="wrapper" style="background-size: cover;">
-            <section aria-label="section" class="jarallax no-top no-bottom text-light" style="z-index: 0; background-size: cover;">
-                <div class="v-center" style="background-size: cover;">
-                    <div class="container" style="background-size: cover;">
-                        <div id="videoF">
-                            <h2 class="title thePlayerTitle">标题</h2>
-                            <ul id="msimg">
-                            </ul>
-                            <h1>请选择播放源及集数 ↓ 选择后回到此处</h1>
-                            <h1><font color="red">请检查网址是否为http:// 若是https://请将s删掉后重新加载本页面</font></h1>
-                        </div>
+        <section aria-label="section" class="jarallax no-top no-bottom text-light" style="z-index: 0; background-size: cover;">
+            <div class="v-center" style="background-size: cover;">
+                <div class="container" style="background-size: cover;">
+                    <div id="videoF">
+                        <h2 class="title thePlayerTitle">标题</h2>
+                        <ul id="msimg">
+                        </ul>
+                        <h1>请选择播放源及集数 ↓ 选择后回到此处</h1>
+                        <h1>
+                            <font color="red">请检查网址是否为http:// 若是https://请将s删掉后重新加载本页面</font>
+                        </h1>
                     </div>
                 </div>
-            <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%); background-size: cover;">
-                <img src="https://api.anosu.top/api/?sort=all" class="jarallax-img" alt="" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: absolute; top: 0px; left: 0px; width: 2079px; height: 1177px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: 0px; transform: translate3d(0px, 0px, 0px);"></div></section>        </div><br><br><br>
-        <div class="col-md-12 text-center wow fadeInUp animated" style="background-size: cover; visibility: visible; animation-name: fadeInUp;">
-            <h2 class="title thePlayerTitle">标题</h2>
-            <div style="text-align: center;">
-        </div>
-            <div class="space-border" style="background-size: cover;"></div>
-        </div>
-        <div style="text-align: center;">
-            <ul class="list_location wow fadeInUp animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                <li><a class="btn btn-dark" href="https://musestar.cc/">缪斯星首页</a></li>
-                <li><a class="btn btn-dark" href="https://musestar.cc/animation">缪斯星动漫</a></li>
-                <li><a class="btn btn-dark" href="https://musestar.cc/movie">缪斯星影视</a></li>
-                <li><a class="btn btn-danger" href="http://search.musestar.cc/">缪斯星搜索</a></li>
-                <li><a class="btn btn-dark" href="http://musestar.cc/musestar">缪斯星官方</a></li>
-                </ul>
             </div>
-        <section id="section-services" class="no-bottom" style="background-size: cover;">
-            <div class="container relative" style="background-size: cover;">
-                <div class="row" style="background-size: cover;">
-                    <div class="col-md-12 text-center wow fadeInUp animated" style="background-size: cover; visibility: visible; animation-name: fadeInUp;">
-                        <h2>播放源及集数选择</h2>
-                        <h3><font color="red">请自行选择合适的播放源，无法播放请更换播放源</font></h3>
-                        <div class="space-border" style="background-size: cover;"></div>
-                    </div>
+            <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%); background-size: cover;">
+                <img src="https://api.anosu.top/api/?sort=all" class="jarallax-img" alt="" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: absolute; top: 0px; left: 0px; width: 2079px; height: 1177px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: 0px; transform: translate3d(0px, 0px, 0px);">
+            </div>
         </section>
+    </div><br><br><br>
+    <div class="col-md-12 text-center wow fadeInUp animated" style="background-size: cover; visibility: visible; animation-name: fadeInUp;">
+        <h2 class="title thePlayerTitle">标题</h2>
         <div style="text-align: center;">
-            <ul id="msp">
-            </ul> <br>
+        </div>
+        <div class="space-border" style="background-size: cover;"></div>
+    </div>
+    <div style="text-align: center;">
+        <ul class="list_location wow fadeInUp animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+            <li><a class="btn btn-dark" href="https://musestar.cc/">缪斯星首页</a></li>
+            <li><a class="btn btn-dark" href="https://musestar.cc/animation">缪斯星动漫</a></li>
+            <li><a class="btn btn-dark" href="https://musestar.cc/movie">缪斯星影视</a></li>
+            <li><a class="btn btn-danger" href="http://search.musestar.cc/">缪斯星搜索</a></li>
+            <li><a class="btn btn-dark" href="http://musestar.cc/musestar">缪斯星官方</a></li>
+        </ul>
+    </div>
+    <section id="section-services" class="no-bottom" style="background-size: cover;">
+        <div class="container relative" style="background-size: cover;">
+            <div class="row" style="background-size: cover;">
+                <div class="col-md-12 text-center wow fadeInUp animated" style="background-size: cover; visibility: visible; animation-name: fadeInUp;">
+                    <h2>播放源及集数选择</h2>
+                    <h3>
+                        <font color="red">请自行选择合适的播放源，无法播放请更换播放源</font>
+                    </h3>
+                    <div class="space-border" style="background-size: cover;"></div>
+                </div>
+    </section>
+    <div style="text-align: center;">
+        <ul id="msp">
+        </ul> <br>
         <ul id="m3u8List">
 
         </ul>
-        </div>
+    </div>
     </div><br>
     <div class="space-border" style="background-size: cover;"></div>
     <div style="text-align: center;">
-        <h3><font color="red">未显示播放源请多刷新几次或更换浏览器，安卓手机建议夸克</font></h3>
+        <h3>
+            <font color="red">未显示播放源请多刷新几次或更换浏览器，安卓手机建议夸克</font>
+        </h3>
         <a class="btn btn-dark" href="https://www.musestar.cn/index.php/29/dhelp/" target="_blank">下载帮助</a>
         <br><br><img height="150" src="https://s1.imagehub.cc/images/2024/01/13/d0469ae970a9dac3b9e56aa223193e34.png"><br>
         <img width=350 src="https://moe-counter.anjiurine.top/get/@musestar?theme=rule34" alt="musestar">
     </div><br>
-        <!-- footer begin -->
-        <footer>
-            <div class="container" style="background-size: cover;">
-                <div class="row" style="background-size: cover;">
-                    <div class="col-md-6" style="background-size: cover;">
-                        <a href="https://musestar.cc/musestar"><font color="red">请勿相信视频内的任何广告，点击缪斯星官方求片报错、赞助支持、加入交流群</font></a>
-                            <script type="text/javascript" src="https://musestar.cc/files/under.js"></script>
-                    </div>
+    <!-- footer begin -->
+    <footer>
+        <div class="container" style="background-size: cover;">
+            <div class="row" style="background-size: cover;">
+                <div class="col-md-6" style="background-size: cover;">
+                    <a href="https://musestar.cc/musestar">
+                        <font color="red">请勿相信视频内的任何广告，点击缪斯星官方求片报错、赞助支持、加入交流群</font>
+                    </a>
+                    <script type="text/javascript" src="https://musestar.cc/files/under.js"></script>
                 </div>
             </div>
-        </footer>
-        <!-- footer close -->
+        </div>
+    </footer>
+    <!-- footer close -->
     </div>
-	</div></div></div></div>
-    <script src="https://cdn.cbd.int/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.cbd.int/jquery-migrate@3.5.2/dist/jquery-migrate.min.js"></script>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdn.cbd.int/jquery@1.7.3/tmp/jquery.js"></script>
     <script src="https://musestar.cc/files/maodesignesia.js"></script>
     <script>
         let msimg = document.getElementById('m3u8List');
         let videoF = document.getElementById('videoF');
-    
+
         function runPlayer(playArr, arrName) {
             for (const teP in playArr) {
                 let temA = document.createElement('a');
@@ -217,7 +244,7 @@
                 msimg.appendChild(temA);
             }
         }
-    
+
         function addPlayer(vUri) {
             let temF = document.createElement('iframe')
             temF.src = (vUri.split('.').pop() === 'html') ? `http://search.musestar.cc/search/playerJ.html?vsrc=${vUri}` : `http://search.musestar.cc/search/playerY.html?vsrc=${vUri}`;
@@ -228,7 +255,7 @@
             videoF.innerHTML = '';
             videoF.appendChild(temF);
         }
-    
+
         const SunZ = [
             "%E4%BF%97",
             "%E6%89%8B%E5%87",
@@ -243,53 +270,78 @@
             "%88%E6%9D%83",
             console
         ];
-        const me$ap = [
-            {name: "A", id: "playarr_hn"},
-            {name: "B", id: "playarr_sn"},
-            {name: "C", id: "playarr_ff"},
-            {name: "D", id: "playarr_lz"},
-            {name: "E", id: "playarr_uk"},
-            {name: "F", id: "playarr_kb"},
-            {name: "G", id: "playarr_fs"},
-            {name: "H", id: "playarr_wj"},
-            {name: "I", id: "playarr_bj"},
+        const me$ap = [{
+                name: "A",
+                id: "playarr_hn"
+            },
+            {
+                name: "B",
+                id: "playarr_sn"
+            },
+            {
+                name: "C",
+                id: "playarr_ff"
+            },
+            {
+                name: "D",
+                id: "playarr_lz"
+            },
+            {
+                name: "E",
+                id: "playarr_uk"
+            },
+            {
+                name: "F",
+                id: "playarr_kb"
+            },
+            {
+                name: "G",
+                id: "playarr_fs"
+            },
+            {
+                name: "H",
+                id: "playarr_wj"
+            },
+            {
+                name: "I",
+                id: "playarr_bj"
+            },
         ];
         //上面这是个对象数组，存储着源相关的内容
         //name是显示在屏幕上的名字，id是本不应该存在的对象的名字
         function crUl() {
             msimg.innerHTML = '';
         }
-    
+
         let pAr;
         let isOnLo = false;
-    
-    
+
+
         let thePlayerTitle = document.getElementsByClassName('thePlayerTitle');
         //获取所有类名为thePlayerTitle的node
         let qwer = decodeURI(getQueryVariable('title'));
         //反编码URI
         for (let inTheInner of thePlayerTitle) {
             inTheInner.innerText = `${qwer}`
-        }
-        ;
-    
+        };
+
         document.title = `${qwer}ฅ^≧ω≦^ฅ缪斯星搜索`
-    
     </script>
     <script src="runP.js"></script>
     <script>
         let tempDo = '';
         let xmlHttpRequest = new XMLHttpRequest();
-        xmlHttpRequest.onreadystatechange = function () {
+        xmlHttpRequest.onreadystatechange = function() {
             if (this.status === 200) tempDo = this.responseText;
         };
-        xmlHttpRequest.onloadend = function () {
+        xmlHttpRequest.onloadend = function() {
             let parse = JSON.parse(tempDo);
             //console.log(parse);
             ulRender(parse);
         };
-        xmlHttpRequest.open('GET', `http://119.91.125.201:11334/ssszz.php?top=10&q=${getQueryVariable('title')}`);
+        xmlHttpRequest.open('GET', `https://searchapi.musestar.cc/ssszz.php?top=10&q=${getQueryVariable('title')}`);
         xmlHttpRequest.send();
-    
     </script>
-</body></html>
+</body>
+
+</html>
