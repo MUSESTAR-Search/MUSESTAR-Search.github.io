@@ -246,7 +246,7 @@
 
         function addPlayer(vUri) {
             let temF = document.createElement('iframe')
-            temF.src = (vUri.split('.').pop() === 'html') ? `http://search.musestar.cc/search/playerJ.html?vsrc=${vUri}` : `http://search.musestar.cc/search/playerY.html?vsrc=${vUri}`;
+            temF.src = (vUri.split('.').pop() === 'html') ? `https://search.musestar.cc/search/playerJ.html?vsrc=${vUri}` : `https://search.musestar.cc/search/playerY.html?vsrc=${vUri}`;
             temF.className = 'thePlayer'
             temF.name = 'theEndPlay'
             temF.scrolling = 'no'
